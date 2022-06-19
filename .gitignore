@@ -5,3 +5,7 @@ examples/**/.build
 
 .yalc
 yalc.lock
+
+*.env
+**/package-lock.json
+
