@@ -1,0 +1,110 @@
+{
+  "id": "com.stripe.sa-template",
+  "version": "0.0.1",
+  "name": "SA App Template",
+  "icon": "",
+  "permissions": [
+    {
+      "permission": "customer_read",
+      "purpose": "list customer detail"
+    },
+    {
+      "permission": "payment_intent_read",
+      "purpose": "read PI"
+    }
+  ],
+  "app_backend": {
+    "webhooks": null
+  },
+  "ui_extension": {
+    "views": [
+      {
+        "viewport": "stripe.dashboard.payment.list",
+        "component": "PaymentListView"
+      },
+      {
+        "viewport": "stripe.dashboard.payment.detail",
+        "component": "PaymentDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.customer.list",
+        "component": "CustomerListView"
+      },
+      {
+        "viewport": "stripe.dashboard.customer.detail",
+        "component": "CustomerDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.invoice.list",
+        "component": "InvoiceListView"
+      },
+      {
+        "viewport": "stripe.dashboard.invoice.detail",
+        "component": "InvoiceDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.product.list",
+        "component": "ProductListView"
+      },
+      {
+        "viewport": "stripe.dashboard.product.detail",
+        "component": "ProductDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.subscription.list",
+        "component": "SubscriptionListView"
+      },
+      {
+        "viewport": "stripe.dashboard.subscription.detail",
+        "component": "SubscriptionDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.payment-link.list",
+        "component": "PaymentLinkListView"
+      },
+      {
+        "viewport": "stripe.dashboard.payment-link.detail",
+        "component": "PaymentLinkDetailView"
+      },
+      {
+        "viewport": "stripe.dashboard.home.overview",
+        "component": "HomeOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.balance.overview",
+        "component": "BalanceOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.billing.overview",
+        "component": "BillingOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.report.overview",
+        "component": "ReportOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.revenue-recognition.overview",
+        "component": "RevenueRecognitionOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.tax-report.overview",
+        "component": "TaxReportOverviewView"
+      },
+      {
+        "viewport": "stripe.dashboard.drawer.default",
+        "component": "DrawerDefaultView"
+      },
+      {
+        "viewport": "settings",
+        "component": "AppSettings"
+      }
+    ],
+    "actions": [],
+    "content_security_policy": {
+      "connect-src": null,
+      "image-src": null,
+      "purpose": ""
+    }
+  },
+  "post_install_action": null
+}

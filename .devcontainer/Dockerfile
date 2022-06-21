@@ -15,15 +15,6 @@ RUN --mount=type=secret,id=stripe-secret  wget https://github.com/stripe/stripe-
     sudo apt-get -f -y install curl apt-transport-https lsb-release gnupg && \
     curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
     CLI_REPO=$(lsb_release -cs) && \
-    echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ ${CLI_REPO} main" \
-    > /etc/apt/sources.list.d/azure-cli.list && \
-    sudo apt-get -f -y install software-properties-common && \
-    sudo apt-get update && \
-    sudo apt-get install -y azure-cli && \
-    rm -rf /var/lib/apt/lists/* && \
-    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - && \
-    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" && \
-    sudo apt-get update && sudo apt-get install terraform && \
     pip3 install -U flask
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 RUN npm install typescript -g 
