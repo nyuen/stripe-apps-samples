@@ -33,6 +33,10 @@ In the meantime, we encourage you to continue preparing your app for publishing 
 - Watching for updates on [GitHub Discussions](https://github.com/stripe/stripe-apps/discussions).
 - Joining the discussion on [Discord](https://discord.com/invite/stripe) in the [Stripe Apps channel](https://discord.com/channels/841573134531821608/974592073229549638).
 
+<h2>Template project<h2>
+
+The template folder contains a placeholder project with a component for each Viewport supported by Stripe Apps
+
 © Stripe
 
 <img src="./.readme/bg-banner-bottom.png" align="right" width="515" alt="top background banner">
